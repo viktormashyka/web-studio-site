@@ -1,0 +1,196 @@
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header--padding {
+  @media screen and (max-width: 767px) {
+    height: 60px;
+    padding-top: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    height: 80px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 80px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.logo {
+  font-family: 'Raleway';
+  @media screen and (max-width: 1199px) {
+    @include font(700, 24px, 1.17, 0.03em);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(null, 26px, 1.19, null);
+  }
+}
+
+.header__logo--right {
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
+.web--blue {
+  color: var(--fourth-color);
+}
+.studio--black {
+  color: var(--main-color);
+}
+
+.menu {
+  @include font(500, 14px, 1.38, 0.02em);
+  color: var(--main-color);
+  display: flex;
+}
+
+.menu-studio__link {
+  color: var(--hover-color);
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    height: 4px;
+    background: var(--hover-color);
+    border-radius: 2px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: 24px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-top: 27px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--hover-color);
+  }
+}
+
+.menu-studio__link--relative {
+  position: relative;
+}
+
+.menu-portfolio__link {
+  color: var(--hover-color);
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    height: 4px;
+    background: #2196f3;
+    border-radius: 2px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: 24px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-top: 27px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--hover-color);
+  }
+}
+
+.menu-portfolio__link--relative {
+  position: relative;
+}
+
+.menu__item {
+  & > a {
+    color: var(--main-color);
+    transition: color var(--transition-main);
+  }
+
+  & > a:hover,
+  & > a:focus {
+    color: var(--hover-color);
+  }
+
+  .menu > &:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .contacts > &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .contacts > &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.contacts {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.contacts-header--left {
+  margin-left: auto;
+}
+
+.menu__link {
+  @include font(500, 14px, 1.14, 0.02em);
+  color: var(--second-color);
+  display: flex;
+  align-items: center;
+  transition: color var(--transition-main);
+
+  &:hover,
+  &:focus {
+    color: var(--hover-color);
+  }
+}
+
+.menu__icon {
+  fill: currentColor;
+}
+
+.menu__icon--right {
+  margin-right: 10px;
+}

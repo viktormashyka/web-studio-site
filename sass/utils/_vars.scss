@@ -1,0 +1,32 @@
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+:root {
+  --main-color: #212121;
+  --second-color: #757575;
+  --third-color: #ffffff;
+  --fourth-color: #2196f3;
+  --background-color: #2f303a;
+  --hover-color: #2196f3;
+  --transition-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
